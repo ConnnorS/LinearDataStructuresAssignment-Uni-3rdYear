@@ -55,7 +55,7 @@ public interface IMember
     public static bool IsValidContactNumber(string phonenumber)
     {
         if (int.TryParse(phonenumber, out _) && phonenumber.Length == 10 && phonenumber[0] == '0') return true;
-        else return false;
+        return false;
     }
 
     // Check if a pin is valid. A pin is valid if it is a number which has a minimal of 4 and a maximal of 6 digits.
@@ -64,7 +64,7 @@ public interface IMember
     public static bool IsValidPin(string pin)
     {
         if (int.TryParse(pin, out _) && pin.Length >= 4 && pin.Length <= 6) return true;
-        else return false;
+        return false;
     }
 
 
