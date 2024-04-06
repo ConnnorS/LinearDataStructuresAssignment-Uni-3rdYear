@@ -63,7 +63,7 @@ public interface IMember
     // Post-condition: return true, if the pin valid; retuns false otherwise.
     public static bool IsValidPin(string pin)
     {
-        if (int.TryParse(pin, out _) && pin.Length >= 4 && pin.Length <= 6) return true;
+        if (int.TryParse(pin, out _) && 4 <= pin.Length && pin.Length <= 6) return true;
         return false;
     }
 
