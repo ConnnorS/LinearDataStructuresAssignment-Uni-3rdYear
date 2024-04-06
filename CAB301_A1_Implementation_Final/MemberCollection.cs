@@ -80,7 +80,7 @@ class MemberCollection : IMemberCollection
         int index;
         for (index = 0; index < Number; index++)
         {
-            // if the member is the same as the current member, don't insert it
+            // if the member is the same as the current member (duplicate), don't insert it
             if (member.CompareTo(members[index]) == 0) return;
 
             // if the member is less than the current member, insert it here
