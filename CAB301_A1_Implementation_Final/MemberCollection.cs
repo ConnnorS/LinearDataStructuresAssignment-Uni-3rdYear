@@ -81,7 +81,7 @@ class MemberCollection : IMemberCollection
             return;
         }
         // find the position in the list to insert the new member
-        int index = 0;
+        int index;
         for (index = 0; index < Number; index++)
         {
             Console.WriteLine($"Comparing {member.ToString()} to {members[index].ToString()}");
