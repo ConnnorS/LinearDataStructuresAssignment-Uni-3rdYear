@@ -54,7 +54,8 @@ public interface IMember
 
     public static bool IsValidContactNumber(string phonenumber)
     {
-        if (phonenumber.Length == 10 && phonenumber[0] == '0') return true;
+        int number;
+        if (int.TryParse(phonenumber, out number) && phonenumber.Length == 10 && phonenumber[0] == '0') return true;
         else return false;
     }
 
@@ -63,7 +64,8 @@ public interface IMember
     // Post-condition: return true, if the pin valid; retuns false otherwise.
     public static bool IsValidPin(string pin)
     {
-        if (pin.Length >= 4 && pin.Length <= 6) return true;
+        int parsedPin;
+        if (int.TryParse(pin, out parsedPin) && pin.Length >= 4 && pin.Length <= 6) return true;
         else return false;
     }
 
