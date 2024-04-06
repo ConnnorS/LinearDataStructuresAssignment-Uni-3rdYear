@@ -68,10 +68,7 @@ class MemberCollection : IMemberCollection
     public void Add(IMember member)
     {
         // check if the collection is full
-        if (IsFull())
-        {
-            return;
-        }
+        if (IsFull()) return;
         // if the collection is empty, don't bother with sorting
         if (IsEmpty())
         {
@@ -84,24 +81,18 @@ class MemberCollection : IMemberCollection
         for (index = 0; index < Number; index++)
         {
             // if the member is the same as the current member, don't insert it
-            if (member.CompareTo(members[index]) == 0)
-            {
-                return;
-            }
+            if (member.CompareTo(members[index]) == 0) return;
+
             // if the member is less than the current member, insert it here
-            else if (member.CompareTo(members[index]) < 0)
-            {
-                break;
-            }
+            else if (member.CompareTo(members[index]) < 0) break;
+
             /* if we reach the end of index without breaking, then the member needs
             to be inserted at the end of the array so we'll just keep going with index 
             equal to Number */
         }
         // shift all the members to the right of where the new member is meant to go
-        for (int i = Number; i > index; i--)
-        {
-            members[i] = members[i - 1];
-        }
+        for (int i = Number; i > index; i--) members[i] = members[i - 1];
+
         // insert the member in the new free position
         members[index] = (Member)member;
         // update the count
