@@ -70,7 +70,6 @@ class MemberCollection : IMemberCollection
         // check if the collection is full
         if (IsFull())
         {
-            Console.WriteLine("Collection is full, member not inserted.");
             return;
         }
         // if the collection is empty, don't bother with sorting
@@ -84,19 +83,19 @@ class MemberCollection : IMemberCollection
         int index;
         for (index = 0; index < Number; index++)
         {
-            Console.WriteLine($"Comparing {member.ToString()} to {members[index].ToString()}");
             // if the member is the same as the current member, don't insert it
             if (member.CompareTo(members[index]) == 0)
             {
-                Console.WriteLine("Member already exists in collection");
                 return;
             }
             // if the member is less than the current member, insert it here
             else if (member.CompareTo(members[index]) < 0)
             {
-                Console.WriteLine($"Inserting {member.ToString()} at index " + index);
                 break;
             }
+            /* if we reach the end of index without breaking, then the member needs
+            to be inserted at the end of the array so we'll just keep going with index 
+            equal to Number */
         }
         // shift all the members to the right of where the new member is meant to go
         for (int i = Number; i > index; i--)
