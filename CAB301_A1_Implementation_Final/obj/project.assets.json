@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\conno\\.nuget\\packages\\": {}
+    "/Users/connorsouthern/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\conno\\OneDrive - Queensland University of Technology\\CAB301 - Algorithms and Complexity\\CAB301 A1\\CAB301_A1_Implementation_Final\\CAB301_A1_Implementation_Final\\CAB301_A1_Implementation_Final.csproj",
+      "projectUniqueName": "/Users/connorsouthern/Library/CloudStorage/OneDrive-QueenslandUniversityofTechnology/CAB301 - Algorithms and Complexity/CAB301 A1/CAB301_A1_Implementation_Final/CAB301_A1_Implementation_Final/CAB301_A1_Implementation_Final.csproj",
       "projectName": "CAB301_A1_Implementation_Final",
-      "projectPath": "C:\\Users\\conno\\OneDrive - Queensland University of Technology\\CAB301 - Algorithms and Complexity\\CAB301 A1\\CAB301_A1_Implementation_Final\\CAB301_A1_Implementation_Final\\CAB301_A1_Implementation_Final.csproj",
-      "packagesPath": "C:\\Users\\conno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\conno\\OneDrive - Queensland University of Technology\\CAB301 - Algorithms and Complexity\\CAB301 A1\\CAB301_A1_Implementation_Final\\CAB301_A1_Implementation_Final\\obj\\",
+      "projectPath": "/Users/connorsouthern/Library/CloudStorage/OneDrive-QueenslandUniversityofTechnology/CAB301 - Algorithms and Complexity/CAB301 A1/CAB301_A1_Implementation_Final/CAB301_A1_Implementation_Final/CAB301_A1_Implementation_Final.csproj",
+      "packagesPath": "/Users/connorsouthern/.nuget/packages/",
+      "outputPath": "/Users/connorsouthern/Library/CloudStorage/OneDrive-QueenslandUniversityofTechnology/CAB301 - Algorithms and Complexity/CAB301 A1/CAB301_A1_Implementation_Final/CAB301_A1_Implementation_Final/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\conno\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/connorsouthern/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
