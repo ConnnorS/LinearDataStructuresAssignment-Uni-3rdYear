@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CAB301_A1_Implementation_Final")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e78cc16c5af309f33ba6d3dc4de2238a7765c0b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f02bdc23e9e6f7a67d95d5604034c68b0f5ab6a")]
 [assembly: System.Reflection.AssemblyProductAttribute("CAB301_A1_Implementation_Final")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CAB301_A1_Implementation_Final")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
