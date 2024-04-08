@@ -99,46 +99,6 @@ class MemberCollection : IMemberCollection
         count++;
     }
 
-    public int Add2(IMember member)
-    {
-        int numOfComparisons = 0;
-        // check if the collection is full
-        numOfComparisons++;
-        if (IsFull()) return numOfComparisons;
-        // if the collection is empty, don't bother with sorting
-        numOfComparisons++;
-        if (IsEmpty())
-        {
-            members[0] = (Member)member;
-            count++;
-            return numOfComparisons;
-        }
-        // find the position in the list to insert the new member
-        int index;
-        for (index = 0; index < Number; index++)
-        {
-            // if the member is the same as the current member (duplicate), don't insert it
-            numOfComparisons++;
-            if (member.CompareTo(members[index]) == 0) return numOfComparisons;
-
-            // if the member is less than the current member, insert it here
-            else if (member.CompareTo(members[index]) < 0) break;
-
-            /* if we reach the end of index without breaking, then the member needs
-            to be inserted at the end of the array so we'll just keep going with index 
-            equal to Number */
-        }
-        // shift all the members to the right of where the new member is meant to go
-        for (int i = Number; i > index; i--) members[i] = members[i - 1];
-
-        // insert the member in the new free position
-        members[index] = (Member)member;
-        // update the count
-        count++;
-
-        return numOfComparisons;
-    }
-
     // Remove a given member out of this member collection
     // Pre-condition: nil
     // Post-condition: the given member is removed from this member collection, if the given member is in this member collection and the members in this member collection remains sorted in alphabetical order by their full names; otherwise, no member is removed from this member collection and this member collection remains unchanged. 
