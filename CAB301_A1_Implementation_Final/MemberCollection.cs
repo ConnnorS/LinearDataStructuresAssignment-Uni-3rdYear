@@ -65,7 +65,7 @@ class MemberCollection : IMemberCollection
     // Pre-condition: this member collection is not full
     // Post-condition: The given member is added to this member collection and the members remains sorted in alphabetical order by their full names, if the given member does not appear in this member collection; otherwise, the given member is not added to this member collection. 
     // No duplicate has been added into this the member collection
-    public void Add(IMember member)
+    public void AddOld(IMember member)
     {
         // check if the collection is full
         if (IsFull()) return;
@@ -98,7 +98,7 @@ class MemberCollection : IMemberCollection
         // update the count
         count++;
     }
-    public void Add2(IMember member)
+    public void Add(IMember member)
     {
         if (IsFull()) return;
 
