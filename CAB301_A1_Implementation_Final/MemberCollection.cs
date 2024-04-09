@@ -91,13 +91,63 @@ class MemberCollection : IMemberCollection
             equal to Number */
         }
         // shift all the members to the right of where the new member is meant to go
-        for (int i = Number; i > index; i--) members[i] = members[i - 1];
+        for (int pos = Number; pos > index; pos--) members[pos] = members[pos - 1];
 
         // insert the member in the new free position
         members[index] = (Member)member;
         // update the count
         count++;
     }
+    public void Add2(IMember member)
+    {
+        if (IsFull()) return;
+
+        if (IsEmpty())
+        {
+            members[0] = (Member)member;
+            count++;
+            return;
+        }
+
+        int left = 0;
+        int right = Number - 1;
+        int index = 0;
+
+        while (left <= right)
+        {
+            int mid = left + (right - left) / 2;
+            int comparison = member.CompareTo(members[mid]);
+
+            if (comparison == 0)
+            {
+                // Member already exists
+                return;
+            }
+            else if (comparison < 0)
+            {
+                // Member should be inserted before mid
+                right = mid - 1;
+                index = mid;
+            }
+            else
+            {
+                // Member should be inserted after mid
+                left = mid + 1;
+                index = left;
+            }
+        }
+
+        // Shift members to the right
+        for (int pos = Number; pos > index; pos--)
+        {
+            members[pos] = members[pos - 1];
+        }
+
+        // Insert the member
+        members[index] = (Member)member;
+        count++;
+    }
+
 
     // Remove a given member out of this member collection
     // Pre-condition: nil
