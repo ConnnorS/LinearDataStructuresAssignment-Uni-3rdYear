@@ -100,36 +100,33 @@ class MemberCollection : IMemberCollection
     }
     public void Add(IMember member)
     {
-        if (IsFull()) return;
+        if (IsFull()) return; // check if the collection is full
 
-        if (IsEmpty())
+        if (IsEmpty()) // if the collection is empty, don't bother with sorting
         {
             members[0] = (Member)member;
             count++;
             return;
         }
 
+        // define the indexes for the binary search
         int left = 0;
         int right = Number - 1;
         int index = 0;
 
+        // do the binary search
         while (left <= right)
         {
             int mid = left + (right - left) / 2;
             int comparison = member.CompareTo(members[mid]);
 
-            if (comparison == 0)
+            if (comparison == 0) return; // check for duplicates
+            else if (comparison < 0) // if the member goes before the mid point
             {
-                // Member already exists
-                return;
-            }
-            else if (comparison < 0)
-            {
-                // Member should be inserted before mid
                 right = mid - 1;
                 index = mid;
             }
-            else
+            else // otherwise, the member goes after the mid point
             {
                 // Member should be inserted after mid
                 left = mid + 1;
@@ -137,13 +134,13 @@ class MemberCollection : IMemberCollection
             }
         }
 
-        // Shift members to the right
+        // once the right index is found, shift all members after that to the right
         for (int pos = Number; pos > index; pos--)
         {
             members[pos] = members[pos - 1];
         }
 
-        // Insert the member
+        // insert the new member keeping the alphabetical ordering
         members[index] = (Member)member;
         count++;
     }
