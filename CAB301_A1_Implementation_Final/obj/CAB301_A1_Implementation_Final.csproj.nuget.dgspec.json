@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/connorsouthern/Library/CloudStorage/OneDrive-QueenslandUniversityofTechnology/CAB301 - Algorithms and Complexity/CAB301 A1/CAB301_A1_Implementation_Final/CAB301_A1_Implementation_Final/CAB301_A1_Implementation_Final.csproj": {}
+    "C:\\Users\\conno\\OneDrive - Queensland University of Technology\\CAB301 - Algorithms and Complexity\\CAB301 A1\\CAB301_A1_Implementation_Final\\CAB301_A1_Implementation_Final\\CAB301_A1_Implementation_Final.csproj": {}
   },
   "projects": {
-    "/Users/connorsouthern/Library/CloudStorage/OneDrive-QueenslandUniversityofTechnology/CAB301 - Algorithms and Complexity/CAB301 A1/CAB301_A1_Implementation_Final/CAB301_A1_Implementation_Final/CAB301_A1_Implementation_Final.csproj": {
+    "C:\\Users\\conno\\OneDrive - Queensland University of Technology\\CAB301 - Algorithms and Complexity\\CAB301 A1\\CAB301_A1_Implementation_Final\\CAB301_A1_Implementation_Final\\CAB301_A1_Implementation_Final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/connorsouthern/Library/CloudStorage/OneDrive-QueenslandUniversityofTechnology/CAB301 - Algorithms and Complexity/CAB301 A1/CAB301_A1_Implementation_Final/CAB301_A1_Implementation_Final/CAB301_A1_Implementation_Final.csproj",
+        "projectUniqueName": "C:\\Users\\conno\\OneDrive - Queensland University of Technology\\CAB301 - Algorithms and Complexity\\CAB301 A1\\CAB301_A1_Implementation_Final\\CAB301_A1_Implementation_Final\\CAB301_A1_Implementation_Final.csproj",
         "projectName": "CAB301_A1_Implementation_Final",
-        "projectPath": "/Users/connorsouthern/Library/CloudStorage/OneDrive-QueenslandUniversityofTechnology/CAB301 - Algorithms and Complexity/CAB301 A1/CAB301_A1_Implementation_Final/CAB301_A1_Implementation_Final/CAB301_A1_Implementation_Final.csproj",
-        "packagesPath": "/Users/connorsouthern/.nuget/packages/",
-        "outputPath": "/Users/connorsouthern/Library/CloudStorage/OneDrive-QueenslandUniversityofTechnology/CAB301 - Algorithms and Complexity/CAB301 A1/CAB301_A1_Implementation_Final/CAB301_A1_Implementation_Final/obj/",
+        "projectPath": "C:\\Users\\conno\\OneDrive - Queensland University of Technology\\CAB301 - Algorithms and Complexity\\CAB301 A1\\CAB301_A1_Implementation_Final\\CAB301_A1_Implementation_Final\\CAB301_A1_Implementation_Final.csproj",
+        "packagesPath": "C:\\Users\\conno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\conno\\OneDrive - Queensland University of Technology\\CAB301 - Algorithms and Complexity\\CAB301 A1\\CAB301_A1_Implementation_Final\\CAB301_A1_Implementation_Final\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/connorsouthern/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\conno\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
