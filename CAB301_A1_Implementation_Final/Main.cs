@@ -1,24 +1,25 @@
+using Bogus;
+
 class App
 {
     static void Main()
     {
-        MemberCollection myCollection = new MemberCollection(10);
-        Member member1 = new Member("John", "Doe", "1234", "1234");
-        Member member2 = new Member("Jane", "Doe", "1234", "1234");
-        Member member3 = new Member("John", "Smith", "1234", "1234");
-        Member member4 = new Member("Jane", "Smith", "1234", "1234");
-        Member member5 = new Member("Connor", "Southern");
-        Member member6 = new Member("James", "De Raat");
-        Member member7 = new Member("Mitchell", "Thomas");
+        Faker faker = new Faker();
 
-        myCollection.Add2(member1);
-        Console.WriteLine(myCollection.ToString());
-        myCollection.Add2(member2);
-        Console.WriteLine(myCollection.ToString());
-        myCollection.Add2(member3);
-        Console.WriteLine(myCollection.ToString());
-        myCollection.Add2(member4);
-        Console.WriteLine(myCollection.ToString());
+        int totalComparisons;
 
+        for (int num = 0; num <= 10000; num += 100)
+        {
+            MemberCollection myCollection = new MemberCollection(num);
+            totalComparisons = 0;
+
+            for (int i = 0; i < num; i++)
+            {
+                Member member = new Member(faker.Name.FullName(), faker.Name.LastName());
+                totalComparisons += myCollection.AddCompare(member);
+            }
+
+            Console.WriteLine($"{num},{totalComparisons}");
+        }
     }
 }

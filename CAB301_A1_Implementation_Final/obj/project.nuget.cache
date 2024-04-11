@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "r2Rtbe702Q2qVgTJ0HvynATmbDds6OpNwfbV09O7nhzNrhJhiiopUpCISLbYT8eFapQcJeGBbQPpllZxpczbBw==",
+  "dgSpecHash": "yeqOQAIdATPuhfZGv/jIkH2fFx9SFL+CMawvfRwWvzjU58wK3Dvc5PaxXDVU4XS5p3aWkVbIt7HRCmD3FVqkaQ==",
   "success": true,
   "projectFilePath": "/Users/connorsouthern/Library/CloudStorage/OneDrive-QueenslandUniversityofTechnology/CAB301 - Algorithms and Complexity/CAB301 A1/CAB301_A1_Implementation_Final/CAB301_A1_Implementation_Final/CAB301_A1_Implementation_Final.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/connorsouthern/.nuget/packages/bogus/35.5.0/bogus.35.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

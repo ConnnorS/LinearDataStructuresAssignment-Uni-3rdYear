@@ -1,6 +1,7 @@
 ﻿//CAB301 assessment 1 
 //The implementation of MemberCollection ADT
 using System;
+using System.Collections;
 using System.Globalization;
 using System.Linq;
 
@@ -28,8 +29,6 @@ class MemberCollection : IMemberCollection
     public int Number { get { return count; } }
 
     public Member[] Members { get { return members; } }
-
-
 
     // Constructor - to create an object of member collection 
     // Pre-condition: capacity > 0
@@ -65,26 +64,32 @@ class MemberCollection : IMemberCollection
     // Pre-condition: this member collection is not full
     // Post-condition: The given member is added to this member collection and the members remains sorted in alphabetical order by their full names, if the given member does not appear in this member collection; otherwise, the given member is not added to this member collection. 
     // No duplicate has been added into this the member collection
-    public void AddOld(IMember member)
+
+    /* FOR TESTING PURPOSES ONLY */
+    public int AddOld(IMember member)
     {
+        int comparisons = 0;
+
         // check if the collection is full
-        if (IsFull()) return;
+        if (IsFull()) return comparisons;
         // if the collection is empty, don't bother with sorting
         if (IsEmpty())
         {
             members[0] = (Member)member;
             count++;
-            return;
+            return comparisons;
         }
         // find the position in the list to insert the new member
         int index;
         for (index = 0; index < Number; index++)
         {
+            int comparison = member.CompareTo(members[index]);
+            comparisons++;
             // if the member is the same as the current member (duplicate), don't insert it
-            if (member.CompareTo(members[index]) == 0) return;
+            if (comparison == 0) return comparison;
 
             // if the member is less than the current member, insert it here
-            else if (member.CompareTo(members[index]) < 0) break;
+            else if (comparison < 0) break;
 
             /* if we reach the end of index without breaking, then the member needs
             to be inserted at the end of the array so we'll just keep going with index 
@@ -97,7 +102,61 @@ class MemberCollection : IMemberCollection
         members[index] = (Member)member;
         // update the count
         count++;
+
+        return comparisons;
     }
+    /* FOR TESTING PURPOSES ONLY */
+    public int AddCompare(IMember member)
+    {
+        int comparisons = 0;
+        if (IsFull()) return comparisons; // check if the collection is full
+
+        if (IsEmpty()) // if the collection is empty, don't bother with sorting
+        {
+            members[0] = (Member)member;
+            count++;
+            return comparisons;
+        }
+
+        // define the indexes for the binary search
+        int left = 0;
+        int right = Number - 1;
+        int index = 0;
+
+        // do the binary search
+        while (left <= right)
+        {
+            int mid = (left + right) / 2;
+            int comparison = member.CompareTo(members[mid]);
+            comparisons++;
+
+            if (comparison == 0) return comparisons; // check for duplicates
+            else if (comparison < 0) // if the member goes before the mid point
+            {
+                right = mid - 1;
+                index = mid;
+            }
+            else // otherwise, the member goes after the mid point
+            {
+                // Member should be inserted after mid
+                left = mid + 1;
+                index = left;
+            }
+        }
+
+        // once the right index is found, shift all members after that to the right
+        for (int pos = Number; pos > index; pos--)
+        {
+            members[pos] = members[pos - 1];
+        }
+
+        // insert the new member keeping the alphabetical ordering
+        members[index] = (Member)member;
+        count++;
+
+        return comparisons;
+    }
+    /* HELLO TUTOR, PLEASE MARK THIS METHOD */
     public void Add(IMember member)
     {
         if (IsFull()) return; // check if the collection is full
@@ -117,7 +176,7 @@ class MemberCollection : IMemberCollection
         // do the binary search
         while (left <= right)
         {
-            int mid = left + (right - left) / 2;
+            int mid = (left + right) / 2;
             int comparison = member.CompareTo(members[mid]);
 
             if (comparison == 0) return; // check for duplicates
