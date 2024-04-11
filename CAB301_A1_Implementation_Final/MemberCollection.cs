@@ -83,8 +83,7 @@ class MemberCollection : IMemberCollection
         int index;
         for (index = 0; index < Number; index++)
         {
-            int comparison = member.CompareTo(members[index]);
-            comparisons++;
+            int comparison = member.CompareTo(members[index]); comparisons++;
             // if the member is the same as the current member (duplicate), don't insert it
             if (comparison == 0) return comparison;
 
@@ -96,7 +95,7 @@ class MemberCollection : IMemberCollection
             equal to Number */
         }
         // shift all the members to the right of where the new member is meant to go
-        for (int pos = Number; pos > index; pos--) members[pos] = members[pos - 1];
+        for (int pos = Number; pos > index; pos--) { members[pos] = members[pos - 1]; }
 
         // insert the member in the new free position
         members[index] = (Member)member;
@@ -156,7 +155,7 @@ class MemberCollection : IMemberCollection
 
         return comparisons;
     }
-    
+
     /* HELLO TUTOR, PLEASE MARK THIS METHOD */
     public void Add(IMember member)
     {
