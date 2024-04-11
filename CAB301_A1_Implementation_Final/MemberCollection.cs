@@ -66,7 +66,7 @@ class MemberCollection : IMemberCollection
     // No duplicate has been added into this the member collection
 
     /* FOR TESTING PURPOSES ONLY */
-    public int AddOld(IMember member)
+    public int AddSequential(IMember member)
     {
         int comparisons = 0;
 
@@ -106,7 +106,7 @@ class MemberCollection : IMemberCollection
         return comparisons;
     }
     /* FOR TESTING PURPOSES ONLY */
-    public int AddCompare(IMember member)
+    public int AddBinary(IMember member)
     {
         int comparisons = 0;
         if (IsFull()) return comparisons; // check if the collection is full
